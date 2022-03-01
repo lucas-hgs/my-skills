@@ -52,7 +52,7 @@ export function Home() {
 
   return(
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome, Lucas</Text>
+      <Text style={styles.title} testID="welcome">Welcome, Lucas</Text>
 
       <Text style={styles.greetings}>
         { greeting }
