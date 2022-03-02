@@ -1,4 +1,4 @@
-describe('Meus primeiros testes', () => {
+describe('Home screen', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
@@ -14,10 +14,14 @@ describe('Meus primeiros testes', () => {
   it('should check if register a new skill', async () => {
     const inputSkill = await element(by.id('input-new'));
     const buttonAdd = await element(by.id('button-add'));
+    const flatListSkills = await element(by.id('flatlist-skills'));
 
     await inputSkill.tap();
     await inputSkill.typeText('React Native');
-
     await buttonAdd.tap();
+    
+    await flatListSkills.tap();
+
+    expect(element(by.id('flatlist-skills'))).toBeVisible();
   });
 });

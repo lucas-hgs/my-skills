@@ -75,8 +75,10 @@ export function Home() {
       </Text>
       
       <FlatList 
+        testID='flatlist-skills'
         data={mySkills}
         keyExtractor={item => item.id}
+        keyboardShouldPersistTaps="never"
         renderItem={({ item }) => (
           <SkillCard 
             skill={item.name} 
